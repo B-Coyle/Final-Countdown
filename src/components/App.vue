@@ -2,71 +2,76 @@
   <div id="app">
     <i class="fas fa-book-reader"></i>
     <h1>Welcome to Final Countdown: Thesaurus</h1>
-    <input type="text" placeholder="Submit a word" id="input"
+    <input
+      type="text"
+      placeholder="Submit a word"
+      id="input"
       @keyup="word = $event.target.value"
       v-on:keyup.delete="reset"
-      />
-      <section id="submit-button">
-        <button v-on:click="fetch">Search</button>
-        <button v-on:click="reset">Reset</button>
-      </section>
-      <p v-if="error" class="error">This word apparently doesn't exist. Please submit a different word</p> 
-      <div class="container" v-if="synonyms.length > 1">
-        <p>Synonyms for <span class="word">{{ word }}</span> are:</p>
-        <ul id="syns-array">
-          <li v-for="(item, index) in synonyms" v-bind:key="`item-${index}`" v-on:click="updateWord">
-            {{ item }} 
-          </li>
-        </ul>
-
-      </div>
+    />
+    <section id="submit-button">
+      <button v-on:click="fetch">Search</button>
+      <button v-on:click="reset">Reset</button>
+    </section>
+    <p v-if="error" class="error">This word apparently doesn't exist. Please submit a different word</p>
+    <div class="container" v-if="synonyms.length > 1">
+      <p>
+        Synonyms for
+        <span class="word">{{ word }}</span> are:
+      </p>
+      <ul id="syns-array">
+        <li
+          v-for="(item, index) in synonyms"
+          v-bind:key="`item-${index}`"
+          v-on:click="updateWord"
+        >{{ item }}</li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
-import { fetchSynonyms } from '../utils/fetchWords'
+import { fetchSynonyms } from "../utils/fetchWords";
 export default {
-  name: 'app',
-  components: {
-    
-  },
+  name: "app",
+  components: {},
   data() {
     return {
-      word: '',
-      error: '', 
+      word: "",
+      error: "",
       synonyms: []
-    }
+    };
   },
   methods: {
     fetch: async function() {
-      this.error = ''
-      const synonyms = await fetchSynonyms(this.$data.word)
-      this.$data.synonyms = synonyms
-      let input = document.getElementById("input")
-      input.value = ''
+      this.error = "";
+      const synonyms = await fetchSynonyms(this.$data.word);
+      this.$data.synonyms = synonyms;
+      let input = document.getElementById("input");
+      input.value = "";
       if (!synonyms.length) {
-        this.error = "Apparently this word doesn't exist. Try again" 
+        this.error = "Apparently this word doesn't exist. Try again";
       }
     },
     reset: function() {
-      this.$data.synonyms = []
-      this.$data.word = ''
+      this.$data.synonyms = [];
+      this.$data.word = "";
     },
     updateWord: async function(e) {
-     this.$data.word = e.target.innerText 
-     const synonyms = await fetchSynonyms(this.$data.word)
-     this.$data.synonyms = synonyms   
+      this.$data.word = e.target.innerText;
+      const synonyms = await fetchSynonyms(this.$data.word);
+      this.$data.synonyms = synonyms;
     }
-  },
-}
+  }
+};
 </script>
 
 <style>
 body {
-  background-image: url('../assets/background.jpeg');
+  background-image: url("../assets/background.jpeg");
 }
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -80,36 +85,39 @@ h1 {
 #input {
   width: 500px;
   height: 50px;
-  border: 5px solid #727077; 
+  border: 5px solid #727077;
   background-color: #eed8c9;
 }
 input::placeholder {
   font-size: 15px;
 }
-input[type=text] {
+input[type="text"] {
   font-size: 15px;
   padding-left: 10px;
 }
 button {
   height: 35px;
   width: 145px;
+  font-weight: 700;
   margin: 10px 10px 20px 10px;
-  border: 5px solid #CECCCC;
+  border: 5px solid #cecccc;
   font-size: 15px;
   color: blue;
-  font-weight: 700;
-  
 }
-button:hover  {
+button:hover {
   cursor: pointer;
-  background-color: #FDECEF;
+  background-color: #fdecef;
+}
+.error {
+  border: 5px solid #eed8c9;
+  background-color: #727077;
 }
 p {
-  color: #CECCCC;
+  color: #cecccc;
   font-weight: 700;
   font-size: 20px;
 }
-.container{
+.container {
   border: 5px solid #eed8c9;
   background-color: #727077;
 }
@@ -120,7 +128,7 @@ ul {
   list-style-type: none;
 }
 li {
-  color: #CECCCC;
+  color: #cecccc;
   margin-bottom: 10px;
   font-weight: 700;
 }
@@ -131,9 +139,5 @@ li:hover {
 i {
   font-size: 30px;
   color: blue;
-}
-.error { 
-  border: 5px solid #eed8c9;
-  background-color: #727077;
 }
 </style>
