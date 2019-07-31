@@ -1,4 +1,4 @@
-export async function fetchSynonyms(word) {
+export async function fetchWords(word) {
     let synonyms = []
     const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/thesaurus/json/${word}?key=${process.env.VUE_APP_KEY}`)
     const result = await response.json()
