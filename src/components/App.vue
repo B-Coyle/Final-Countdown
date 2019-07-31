@@ -15,8 +15,7 @@
     <p v-if="error" class="error">This word apparently doesn't exist. Please submit a different word</p>
     <div class="container" v-if="synonyms.length > 1">
       <p>
-        Synonyms for
-        <span class="word">{{ word }}</span> are:
+        Synonyms for {{ word }} are:
       </p>
       <ul id="synonyms-list">
         <li
@@ -124,9 +123,6 @@ p {
 .container {
   border: 5px solid #eed8c9;
   background-color: #727077;
-}
-.word {
-  color: pink;
 }
 ul {
   list-style-type: none;
