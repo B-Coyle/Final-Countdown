@@ -38,3 +38,24 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 [![localhost-8080-1.png](https://i.postimg.cc/s2f1gCv5/localhost-8080-1.png)](https://postimg.cc/qNYp1Yc7)
 
 [![finalcountdownbc-herokuapp-com.png](https://i.postimg.cc/2ShnZYkJ/finalcountdownbc-herokuapp-com.png)](https://postimg.cc/G434WZsJ)
+
+
+## Emphasis of the Project
+Further knowledge on the following technologies/principles:
+
+Vue.js 
+CSS
+Async Javascript
+API fetches
+Webpack
+NPM
+UI Design 
+Linting
+
+
+## Contributors/Project Length
+Created by:
+
+- Bridgett Coyle: [GitHub](https://github.com/B-Coyle), 
+                [Email](mailto:bacoyle0409@gmail.com),
+                [LinkedIn](https://www.linkedin.com/in/justinpyktel/)

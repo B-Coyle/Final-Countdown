@@ -130,7 +130,7 @@ ul {
 }
 li {
   color: #cecccc;
-  margin-bottom: 10px;
+  margin-bottom: 10px; 
   font-weight: 700;
 }
 li:hover {
