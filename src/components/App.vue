@@ -106,11 +106,11 @@ button {
   margin: 10px 10px 20px 10px;
   border: 5px solid #cecccc;
   font-size: 15px;
-  color: blue;
+  color: #e4535e;
 }
 button:hover {
   cursor: pointer;
-  background-color: #fdecef;
+  background-color: blue;
 }
 .error {
   border: 5px solid #eed8c9;
@@ -143,6 +143,6 @@ li:hover {
 }
 i {
   font-size: 30px;
-  color: blue;
+  color: #e4535e;
 }
 </style>
