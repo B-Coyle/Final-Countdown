@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <i class="fas fa-book-reader"></i>
     <h1>Welcome to Final Countdown: Thesaurus</h1>
     <input
       type="text"
@@ -9,7 +8,7 @@
       @keyup="word = $event.target.value"
       v-on:keyup.delete="reset"
     />
-    <section id="submit-button">
+    <section id="submit-btn">
       <button v-on:click="fetch">Search</button>
       <button v-on:click="reset">Reset</button>
     </section>
@@ -139,10 +138,6 @@ li {
 }
 li:hover {
   cursor: pointer;
-  color: #e4535e;
-}
-i {
-  font-size: 30px;
   color: #e4535e;
 }
 </style>
