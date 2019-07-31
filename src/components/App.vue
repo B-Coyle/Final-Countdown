@@ -67,6 +67,8 @@ export default {
 <style>
 body {
   background-image: url("../assets/background.jpeg");
+  display: flex;
+  justify-content: center;
 }
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
