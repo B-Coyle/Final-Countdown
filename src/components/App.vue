@@ -12,7 +12,7 @@
       <button v-on:click="fetch">Search</button>
       <button v-on:click="reset">Reset</button>
     </article>
-    <p v-if="error" class="error">This word apparently doesn't exist. Please submit a different word</p>
+    <p v-if="error" class="error">Ding Dong that word is wrong. Try again</p>
     <article class="container" v-if="synonyms.length > 1">
       <p>Synonyms for {{ word }} are:</p>
       <ul id="synonyms-list">
