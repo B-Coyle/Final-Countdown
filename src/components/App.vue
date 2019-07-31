@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <section id="app">
     <h1>Welcome to Final Countdown: Thesaurus</h1>
     <input
       type="text"
@@ -8,12 +8,12 @@
       @keyup="word = $event.target.value"
       v-on:keyup.delete="reset"
     />
-    <section id="submit-btn">
+    <article id="submit-btn">
       <button v-on:click="fetch">Search</button>
       <button v-on:click="reset">Reset</button>
-    </section>
+    </article>
     <p v-if="error" class="error">This word apparently doesn't exist. Please submit a different word</p>
-    <div class="container" v-if="synonyms.length > 1">
+    <article class="container" v-if="synonyms.length > 1">
       <p>
         Synonyms for {{ word }} are:
       </p>
@@ -24,8 +24,8 @@
           v-on:click="updateWord"
         >{{ item }}</li>
       </ul>
-    </div>
-  </div>
+    </article>
+  </section>
 </template>
 
 <script>
