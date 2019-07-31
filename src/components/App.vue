@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import { fetchWords } from "../utils/fetchWords";
+import {fetchWords } from "../utils/fetchWords";
 export default {
   name: "app",
   components: {},
