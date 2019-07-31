@@ -79,21 +79,25 @@ body {
 }
 h1 {
   color: #e99787;
+  padding: 10px;
+  margin: 25px;
   border: 5px solid #eed8c9;
   background-color: #727077;
 }
 #input {
-  width: 500px;
+  width: 400px;
   height: 50px;
+  margin: 25px;
+  text-align: center;
   border: 5px solid #727077;
   background-color: #eed8c9;
 }
 input::placeholder {
-  font-size: 15px;
+  font-size: 25px;
 }
 input[type="text"] {
-  font-size: 15px;
-  padding-left: 10px;
+  font-size: 25px;
+  padding-left: 45px;
 }
 button {
   height: 35px;
@@ -111,6 +115,7 @@ button:hover {
 .error {
   border: 5px solid #eed8c9;
   background-color: #727077;
+  color: #e99787;
 }
 p {
   color: #cecccc;
