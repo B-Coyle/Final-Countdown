@@ -19,7 +19,7 @@
         Synonyms for
         <span class="word">{{ word }}</span> are:
       </p>
-      <ul id="syns-array">
+      <ul id="synonyms-list">
         <li
           v-for="(item, index) in synonyms"
           v-bind:key="`item-${index}`"
