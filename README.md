@@ -1,5 +1,9 @@
 # finalcountdown
 
+## Description 
+
+Final Countdown is my first Vue app. It's a single page application that allows users to find synonyms for words. What populates are also clickable to find synonyms for the new word.
+
 ## Project setup
 ```
 npm install
