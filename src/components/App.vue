@@ -14,9 +14,7 @@
     </article>
     <p v-if="error" class="error">This word apparently doesn't exist. Please submit a different word</p>
     <article class="container" v-if="synonyms.length > 1">
-      <p>
-        Synonyms for {{ word }} are:
-      </p>
+      <p>Synonyms for {{ word }} are:</p>
       <ul id="synonyms-list">
         <li
           v-for="(item, index) in synonyms"
@@ -51,14 +49,15 @@ export default {
         this.error = "Apparently this word doesn't exist. Try again";
       }
     },
-    reset: function() {
-      this.$data.synonyms = [];
-      this.$data.word = "";
-    },
+
     updateWord: async function(e) {
       this.$data.word = e.target.innerText;
       const synonyms = await fetchSynonyms(this.$data.word);
       this.$data.synonyms = synonyms;
+    },
+    reset: function() {
+      this.$data.synonyms = [];
+      this.$data.word = "";
     }
   }
 };
