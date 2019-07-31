@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import { fetchSynonyms, fetchWords } from "../utils/fetchWords";
+import { fetchWords } from "../utils/fetchWords";
 export default {
   name: "app",
   components: {},
@@ -52,7 +52,7 @@ export default {
 
     updateWord: async function(e) {
       this.$data.word = e.target.innerText;
-      const synonyms = await fetchSynonyms(this.$data.word);
+      const synonyms = await fetchWords(this.$data.word);
       this.$data.synonyms = synonyms;
     },
     reset: function() {
